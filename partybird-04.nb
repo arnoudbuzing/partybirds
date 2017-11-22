@@ -1,0 +1,117 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3361,        107]
+NotebookOptionsPosition[      2934,         91]
+NotebookOutlinePosition[      3282,        106]
+CellTagsIndexPosition[      3239,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"birds0", "=", 
+   RowBox[{"ImageCrop", "/@", 
+    RowBox[{
+    "Import", "[", 
+     "\"\<https://rocketchat.wolfram.com/emoji-custom/PartyBird.gif\>\"", 
+     "]"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"size", "=", 
+   RowBox[{"Max", "[", 
+    RowBox[{"ImageDimensions", "/@", "birds0"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"birds", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"ImageCrop", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"{", 
+        RowBox[{"size", ",", "size"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Center", ",", "Bottom"}], "}"}], ",", 
+       RowBox[{"Padding", "\[Rule]", "White"}]}], "]"}], "&"}], "/@", 
+    "birds0"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"bird", ":=", 
+   RowBox[{"First", "[", 
+    RowBox[{"birds", "=", 
+     RowBox[{"RotateLeft", "[", 
+      RowBox[{"birds", ",", "1"}], "]"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"list", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"ImageResize", "[", 
+      RowBox[{
+       RowBox[{"ImageAssemble", "[", 
+        RowBox[{"Map", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"ImageMultiply", "[", 
+            RowBox[{"bird", ",", 
+             RowBox[{"GrayLevel", "[", 
+              RowBox[{"1", ",", 
+               RowBox[{"1", "-", "#"}]}], "]"}]}], "]"}], "&"}], ",", 
+          RowBox[{"ImageData", "[", 
+           RowBox[{"ImageAdjust", "@", 
+            RowBox[{"RemoveAlphaChannel", "@", 
+             RowBox[{"ColorConvert", "[", 
+              RowBox[{"b", ",", "\"\<Grayscale\>\""}], "]"}]}]}], "]"}], ",", 
+          RowBox[{"{", "2", "}"}]}], "]"}], "]"}], ",", 
+       RowBox[{"Scaled", "[", 
+        RowBox[{"1", "/", "2"}], "]"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"b", ",", "birds"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<partybirds.gif\>\"", ",", "list", ",", 
+   RowBox[{"\"\<DisplayDurations\>\"", "\[Rule]", "0.1"}], ",", 
+   RowBox[{"AnimationRepetitions", "\[Rule]", "Infinity"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7203547709430847`*^9, 
+  3.7203547751665077`*^9}},ExpressionUUID->"98b88415-f69f-40d0-acdd-\
+5769221eb16b"],
+
+Cell[BoxData["\<\"partybirds.gif\"\>"], "Output",
+ CellChangeTimes->{
+  3.720354786484418*^9},ExpressionUUID->"90c38803-7025-4127-8bb2-\
+98cf44091a86"]
+}, Open  ]]
+},
+WindowSize->{759, 833},
+WindowMargins->{{Automatic, 572}, {74, Automatic}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 2184, 61, 200, "Input",ExpressionUUID->"98b88415-f69f-40d0-acdd-5769221eb16b"],
+Cell[2767, 85, 151, 3, 32, "Output",ExpressionUUID->"90c38803-7025-4127-8bb2-98cf44091a86"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

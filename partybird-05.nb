@@ -1,0 +1,256 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11500,        246]
+NotebookOptionsPosition[     10978,        229]
+NotebookOutlinePosition[     11326,        244]
+CellTagsIndexPosition[     11283,        241]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PutABirdOnIt", "[", "expr_", "]"}], ":=", 
+  RowBox[{"DynamicModule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"bird", ",", "birds", ",", "obj"}], "}"}], ",", 
+    RowBox[{"Dynamic", "[", 
+     RowBox[{
+      RowBox[{"Labeled", "[", 
+       RowBox[{"expr", ",", 
+        RowBox[{"Part", "[", 
+         RowBox[{"birds", ",", 
+          RowBox[{"1", "+", "bird"}]}], "]"}], ",", "Top"}], "]"}], ",", 
+      RowBox[{"Initialization", "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"bird", "=", "0"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"birds", "=", 
+          RowBox[{
+          "Import", "[", 
+           "\"\<https://rocketchat.wolfram.com/emoji-custom/PartyBird.gif\>\"\
+", "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"obj", "=", 
+          RowBox[{"SessionSubmit", "[", 
+           RowBox[{"ScheduledTask", "[", 
+            RowBox[{
+             RowBox[{"bird", "=", 
+              RowBox[{"Mod", "[", 
+               RowBox[{
+                RowBox[{"bird", "+", "1"}], ",", 
+                RowBox[{"Length", "[", "birds", "]"}]}], "]"}]}], ",", 
+             "0.05"}], "]"}], "]"}]}], ";"}], ")"}]}], ",", 
+      RowBox[{"Deinitialization", "\[RuleDelayed]", 
+       RowBox[{"TaskRemove", "[", "obj", "]"}]}]}], "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.7203552379335155`*^9, 
+  3.720355237934514*^9}},ExpressionUUID->"86d20b64-9ec4-4924-b1a4-\
+43ccd3b5910d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PutABirdOnIt", "[", "1234", "]"}]], "Input",
+ CellChangeTimes->{{3.7203552401485157`*^9, 
+  3.720355244139518*^9}},ExpressionUUID->"bf66258c-a8d3-4981-b661-\
+570a8dec0ad2"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`bird$$ = 0, $CellContext`birds$$ = {
+   Image[CompressedData["
+1:eJzdls9KAkEcx2fXNevmsaUgpEuFULmoUV00CCUz0CIsL0qb1MFAhSh6AQ8+
+jMd8BfM9fItvM8rYMqw6+89Dh6+4O8POZ76/7/yJ1d9KzyohpL1Of0q190yr
+VfsoR+nDXbP90miaT/lmx2yYrZN6iL7UqXapNCoA/07j8Rhcnd6r7f9VcrBx
+QykyE3vefiAznlVwiAzzxPoFycHHYfNHr2cr1sb7BeEP+6YWDiGbzSJXvEBs
+bweqRrAViYCoBGpYgRJVkD5L4qZ0jaNUHAp9v7YRBlsyuq77wsT9UDcJqtUq
+hj9DDAYDGAljMg5TZH9ak/R5Cv1+H6PRCKZpztq73a4vLDwfzPvvSgWnhoHb
++zISyUOoytQP1ofJ/HxE/PgAhWIBuatL6qWGfCXjqydM8/LBc8pFvv76+5kb
+nsNFWRVZuI9ie9CeyLJ49cYtC/dSXONuWWQ5+Fh8vxU9sbK4rZNTFusZYJcv
+Lywy+6vdPmvH78UXca93yiP2d5sXu9rIsFhzY5dtpyzzzj5ZlmXrTJZhUVb5
+fGXr5bY+4n1k2V3ADZMsi/Xc81IHr77I3o28ahmLk73MD1/mZdeakSD9sPoy
+mbNEXlclkeMX8XIhHQ==
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+   Image[CompressedData["
+1:eJzFl19LwlAYxs/mDC+9iGgQiATVxSLS0iAIsigjE1IrKG+UVtSFgQpR9AUW
+9FUCb/0K5nVfwW/xdM7ixGFsc5tndPFsc+dw3t+e9z1/zLafancqIaSXopda
+63m/22291NP0x0Wn93DfMW9POn3z3uzutBP0pU61TKVRAQityWSC/scjEgXi
+KtYWZdwoHExeHFysT9wcYryla/r627LFn9k9bn/EvIgMXorLHzYei68lEyiV
+SihXD5Bdy2AxPQdVIyAKgZpUoKQVFHe3cd6oYCNnQFHJbzstS13XpTBxP1IG
+QbPZxOhrhOFwiHwub8dhKhxu2r4ZWysYDAYYj8cwTfOv3bKsmVnEGmHef75f
+0m9eR+OqjrPjPTuOUVy1OZjM1xssZOZRqVZQPj2iXmpQMnJy5WRxqwvOwSX2
+5bUso46dY4dlkVXH0zxxspA34srC+8lg8ZvDrJ0zePkiI09B1hMxjl9/WSx+
+axpnYXfx+T98EWszyHyL0xfnHuTXPkvtiueCaTzi/ujlS1QWcT4H2QuD+BY1
+R04Wrqg8Udc7MTfOM0pUrijeyMzNLN6ErdW46iZOP8J4E/b8KMMbLxbG4bV+
+x+WNV56C/MeQLTeWHweCV/c=
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+   Image[CompressedData["
+1:eJzVls9KwzAcx9O1ingSBKEw0CGIB0HdcJsoglNBYXPQoQc3DxvWoYcJ20AU
+rx568DF8gF33CnPvsbf4mRRSf8TFxaWtePiWNknz+/D7l6QaD85tghDSmaMP
+p/542G7XnyoL9OOi1blrttybs1bXbbrtfMOkgzbVKpVFBQD/SqPRCJi6b/dg
+Zomv5BUJ3tk4m4+DQ2Qg8BoIj0fJw/bmtpgwg6goeTAHs4H9weODx3G8ouCw
+ZkwoFApwen4EqfVlIEuzkLCobYPanafzKwRyeztQdkqwmd4AI0HAMOk8LQnb
+tkNh4vlBvBOo1Wow+BhAv9+HTDrj22HKHm/7PsjtZ6HX68FwOATXdYN5z/O0
+WXBs/Ji8V2Arn4HLagV2iwe+HeYPxsHkPlchubYIpXIRStcO9aUFxnI4ecNZ
+xHrBucLEWbgP+XqcS7o84t6yesEsstzWYWH/8n1ktTvJL2HV+LdckbDw2sUs
+snW6LLL4jIuTjD0sFpUeK0q2btrep8qCz0XZ2jDyVxZ/ma2faj8slkk5o8qq
+c58Qz8S/5Ali9PJ1Dou9bBqe38YL35twT9flwbWnyiOro7h5xvkkCqnwqPYW
+Xankj2r/j8M/4j07TnGGT1fkhYg=
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+   Image[CompressedData["
+1:eJzVls9KAlEUxu84M9DSRWgDgUkQLYxIy4pW2R/6MwRptUg3SlPUwkCFKHyF
+3qIewK2vYL6Hb/F1Z+DI5TKjI3PHaPEJo2c4v/ud74yTbbyWHxOMsfYC/yjX
+3w5brfp7Jckvbpvt56em83De7DhPTmuvofMvLa5VLoMLwL/RaDSCn/6Co/P5
+MtbyPfM0Tx7qpRfZRMXNRF5QP9cHuUjkcWvj4JE5pt3gcsbBQxyGqaNUKuHk
+4gjZ9QxYKgWWToNpDAlTg5bUsHuwg+sbG5v5HLQEg6Zzbr6SlmUp4aF8JJYY
+arUaBj8D9Pt9FPIFr4+r4vGW50Vuew29Xg/D4RCO44x/73a7SlhoNt7F9xc/
+8wbuqhXs27bXx1hh431yPqpIZRZhX9k4uzyFaRrQMkzJnMSd8SugDPvtt5zn
+qDzE4rczlFGZRa6nHEdhEZ8lQSx+vvjVR90pcY+DisL4omJOIkuQL+KZRZag
+ujh9kecUlPOomQmTF9F/UapZiGcai8wTlCtVLNPmRL3C8NK7RVwsYRX1fzzM
+Ls2LSWSRFYWH5joLD82J7lfNJL8PhvHF71wqWGbhCfO8U50jt+cklnlKZvkF
+ClgL5A==
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+   Image[CompressedData["
+1:eJztlk9LAkEYxmfWXegSeLKCIKRLhFAqrkZekogyK1iLIL1obVIHAzX6Q1+h
+r9HdSwe/gvk9/BZPO8LEMK3rtLvuqcOzsOO7vL953nfeMdl8sG41Qkh3wXlY
+jae9TqfxUo07Lxft7l2rbd8ctXt2y+4UmjFnccXRuiPdEYB//VHj8Rhcvfd7
+iO9Rc6xeEcTM3+JcUTCwXDwv4xElM0XlxfMnporHzMMf0Q8vhih4GIduxFAq
+lWDVrpHcWIOmExiLSyCUQDMoaJwiv5vDmXWCbTMFqhHQGAEbDYlEIhQeti+2
+P22ZoF6vY/g1xGAwQDaTneRhMvfTE9/yRRP9fh+j0Qi2bf/8XiznArOItWG9
+Un78QCZXwPllFdmdLVCqTfxgMUz2aw2p9CYqpxUcHh/AMHTQtXBqxT2Z1ie8
+lzkLE19ziwnaJ7POjczi1uOcJ4g38h5VWMib+zdBvRFnmioLn3tucWzdrzeq
+c43lmFYfmdkvC6+Rly9ijBd7WDXy8kW+h6ZxB/VF5RzJPLNi/Hoza77IuVTv
+KD/+iHezSi4VyTVVZZJZwuQRmVR8Emsk/28Kg03kmTV75H6ZB4/YR141U+nd
+sHhEj9x4RJYo5XbuvwH30By7
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+   Image[CompressedData["
+1:eJztlk9Kw0AYxWeSFLrsSggIRcSNFvwTbC26sQuhUCtUulALUmksdVGhLYji
+BbroATyB6257hdp7dOMZnpnAp0NM6jRpKoKLl5CZkO83b95MZu3mvnKrMca6
+SedSqT8cdzr1x/OU81Btd1vNtt0otnt20+4c3OhOo+lo3ZHhCMC//rim0ymC
+9BscvcEd9CzD6iVz7+JZaBlMVEPUVVFcPLIP5MX7AN8k2smnuHhkDrmuHw8p
+Dh6aFyOho1AooF5tYGMrDa4xaIbTriWgJTh4iiN3uI+zyil2shm3n+sMYrsy
+TXMhPORJMsNQq9UwfhtjNBrB2rPcOq5WuDuHuaMshsMhJpMJbNv+7O/3+5FZ
+5KwK318uXpGz8mhet2Dlt8G55vpBa8h+ukJmdxOlcgnF8onjpQGeXsw8Ecus
+bIh+9vy1pslHOVe05pfBInN4WRaVY3k/i8IivxeXJ1RDvKPCEtYbb25/4iEO
+2u/89sEoLEFj9KtB3gR5GTXD5I2KL7KC5jUKi4ov8phVcx7GE9l/FZ64/lFy
+dlVYVBTmHy6fVWi8fgrLNA+Pdw3N4gnDNI8/3jOk9ztBfGF46Fyqmpe4NYvl
+Axb7ZXg=
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+   Image[CompressedData["
+1:eJztls1KAlEYhmfUsdq5CGUqMCkiol8FcRdNEFYmpUVkbhQny4WBSlF3IOHS
+TTfQ2mXegnkf3sXbzMSR08Gcf9u4eETPHOZ7z/v9HCPFx8ydh+O4+qzykSk8
+H9RqhZdsQPlxVa0/lKty6bjakMtyLVH0KouiwoqCTwHAlCmuMxgMwPKf8Rut
+yi8mpYnE9sY5XdzUo76bjrWU+wEtDCFrbulhvaBjj8MNPbQfq4FlSJKEZPoQ
+kfUwFvxBLM6EIHgEJEJ7eIpXcCGd4T5Xwm58E7yHg39OgDpORVG0pYnWoZ71
+/eQN+Xweva8eut0uYtGYFkcjyGv7NrbX0Ol00O/3Icvy8Hmz2bSshc4N7f3n
+zQd2olu4vM7ifD+lxeED/LCP5NdbBMPzSKVTSJ4ewSf40G63HfGErU8WUq90
+X9O1rX5X15zwRE8L2UNroXvMbg0b9UTPF/J8Ulr0fCF7yEy2qsXIHNHzxW6e
+zPhCn5t4wp7DTp6saCH7R81nO77QM99o/bJ3lRO+sLN21B2o581fOTSrZVRP
+0hi9G53yhI7JajGryUqtsLkZ179mNZm9B9j/Sk5j1JdvGWJyAw==
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+   Image[CompressedData["
+1:eJztlsFKAkEcxme1laCLEAlbgkgUHYpIaQ3s0hZhaEZaBOVFaZMKDFSIeoHw
+0CN0CXwAr9IbmO/hO3T4mhEmpmHT3XWtQx4+wZ0d/7/5/t9/12jpLnflI4TU
+pulHrni/U60WH/JB+uW0UrsuV8zLg0rdLJvVrZKfXtSoFqmmqABMNNG/Va/X
+g5X+gqH+fAO/Tr4pfE5+hYnXsKrPJF8fF4/sA6uN2w9LiVxe88gcPzHIYvey
+fV6zcC+WZiIwDAOp7C6iKxHMq3NYUEMgCoFPVaAEFSSSmzjKHWI9tgrFRxAK
+0XX6qNc0bSQuMR/srC/6EwqFAjrvHbTbbcRj8X4dJn1vo+9DYltHq9VCt9uF
+aZpf641GYyQW3hsxH2/GKz3zGk7O8jhOpvt1mB/sXibz8QLh5Vlkshmk0vtQ
+AwE0m01PPRmWVc7CJM/VKBlme/nvDcson2mZxat5suqNG1/EeXLDY7c3VvMr
++8LX+PPYrSdOWcQ+iXu5R05ZZE/s9IizcB75HG4yI+aVM9hlEWt6wWKVV7Hv
+TlissmSXZVBeOY8TLjdZsfPek1mccNntj9v3r8znhS9W/4vGpUEsnxQKXJ0=
+
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+   Image[CompressedData["
+1:eJztlk9LAkEYxif/QMUSHWLBCkyCiiiJJLOiIKtDYUVaBOklaZMKDFSKomsH
+D32Ejn4Aj0nfwPwefounnY2RcdqVHdc/Fw/PLrMzO+9vn/ed2QmkH+O3LkJI
+fli/xK+fd3O565fEuN64yObvMlnt5jBb0DJaLpJ26w99umZ1eXQBGGigvqpe
+r4NXv+IXPu4xfUXgDv+Jtql6wcQYWOxWokzd5KDzs1jUDyo8fDWJ96kb/vBe
+eEbciEajODjaQ2DBj0mvginvGIhL7x/V+2cINnbWcBo/xuZ2BKqqwufzgW5v
+9N4pDvrNn+E0UqkUqj9VVCoVhFZDRhxD6pAxZjE4h3K5jFqtBk3TGv3FYtER
+C8sLn4/v6BOCK8s4v0zgbGvfiLO0Pt+oXe01CdU/gdhJDMlkEoqioFQqdcwT
+sS548WuIia/jTtSNmSdWLOSd/GNhdeyUxa4nrXxhfU54ZDi6ySKuG7ssdCzj
+IG/N39Hu3ifuZ3ZYRG/4d1nNyLKInsiy8OLflWURa4SxyOTJjEN2LVnVSLs8
+4ng7LOJ/12x+2VxZ8bViEf+7VnPx3sj6ZCc/4hnE7ryyTK08MTsLteu90/yI
+eemFrNbyL6DiH8M=
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> True], 
+   Image[CompressedData["
+1:eJztls1KAlEYhsc/+nEjEsFUYBJERUQoDYUQZBQYZmS0KTdKk6RkoELUHbjw
+Elp6AW6lOzDvw7t4O0c5cTo605yZUTctXnV0ON/jc775ZqKFl+yjV1GU2jx5
+yeZfT6rV/NtNiBzcVmpPxYr+kKrU9aJePSz4yJcqyQaJnwTAf6aUfr8PMbNm
+qTdLM2FhNX2aYphJc7H11+5+16XHKJdHvmeuJsHB16KfWSiHGN6P2xw8g3/B
+h2QyibOLU0S3IlgJBLBKonjJOYsKPCEPjo4PcJW9xL62i3A4DFVVQccKfXfC
+QV1TDvafPzQNuVwO3a8uOp0O4rH4oA7N3PaQd2dvE+12G71eD7qu//zeaDQc
+sTAn/B58Ei+JWAzPhOk6kRjU8a8Pe4RGf7/HcmQJ6Uwaqcw5gsEgWq2W6xxG
+/cE4WNieutHHjMWoP0UWep7IgmbTcR/LODHzQln4688OC1tLhmWcF+bULot4
+DVthYbNmxIswb+w6+WuembkRndphEd1aZRHnv+hUlsWoX6164WuKa8iwjJuv
+Yi/IsBg5c6NXZdzYvU/y91+zenwfy3jiZ48ZC78vMmvLMjEWKz7surfKbbQ/
+4vOhkz5wukfjnhGnEZHlG9PV3tI=
+    "], "Byte", ColorSpace -> "RGB", Interleaving -> 
+    True]}, $CellContext`obj$$ = TaskObject[
+   Association[
+   "TaskUUID" -> "81588dfd-7a12-414f-a1ca-fc139c95427e", "TaskEnvironment" -> 
+    "Session", "TaskType" -> "Scheduled", "EvaluationExpression" :> 
+    HoldForm[$CellContext`bird$$ = Mod[$CellContext`bird$$ + 1, 
+        Length[$CellContext`birds$$]]], "Schedule" -> 
+    Association[
+     "Repeated" -> True, "TotalRunCount" -> DirectedInfinity[1], 
+      "RunInterval" -> 0.05], HandlerFunctions -> Association[], 
+    HandlerFunctionsKeys -> {
+     "Task", "TaskUUID", "TaskType", "TaskStatus", "TaskEnvironment", 
+      "HandlerFunctions", "HandlerFunctionsKeys", "EventName", 
+      "EvaluationExpression", "EvaluationResult", "Schedule", "RunInterval", 
+      "PreviousRunCount", "RemainingRunCount", "TotalRunCount", 
+      "MessageOutput", "PrintOutput"}]]}, 
+  DynamicBox[ToBoxes[
+    Labeled[1234, 
+     Part[$CellContext`birds$$, 1 + $CellContext`bird$$], Top], StandardForm],
+   Deinitialization:>TaskRemove[$CellContext`obj$$],
+   ImageSizeCache->{35., {3., 42.}},
+   Initialization:>($CellContext`bird$$ = 0; $CellContext`birds$$ = 
+     Import["https://rocketchat.wolfram.com/emoji-custom/PartyBird.gif"]; \
+$CellContext`obj$$ = SessionSubmit[
+       ScheduledTask[$CellContext`bird$$ = Mod[$CellContext`bird$$ + 1, 
+          Length[$CellContext`birds$$]], 0.05]]; Null)],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{
+  3.7203552446725187`*^9},ExpressionUUID->"de0e70ff-0991-46cb-8264-\
+80d263e132e8"]
+}, Open  ]]
+},
+WindowSize->{759, 813},
+WindowMargins->{{Automatic, 572}, {74, Automatic}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1465, 37, 105, "Input",ExpressionUUID->"86d20b64-9ec4-4924-b1a4-43ccd3b5910d"],
+Cell[CellGroupData[{
+Cell[2048, 61, 196, 4, 28, "Input",ExpressionUUID->"bf66258c-a8d3-4981-b661-570a8dec0ad2"],
+Cell[2247, 67, 8715, 159, 63, "Output",ExpressionUUID->"de0e70ff-0991-46cb-8264-80d263e132e8"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
